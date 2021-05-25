@@ -1,5 +1,6 @@
 body {
   background-color: #e4f9f5;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .header {
@@ -54,7 +55,7 @@ h3 {
 }
 
 .maincontent1 {
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Montserrat', sans-serif;
 }
 
 h3:hover {
@@ -64,7 +65,7 @@ h3:hover {
 .maincontent2 {
   table-layout: auto;
   width: 100%;
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Montserrat', sans-serif;
 }
 
 .description {
