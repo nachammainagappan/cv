@@ -9,7 +9,7 @@
 </head>
 
 <link rel="stylesheet" href="css/style.css">
-<link rel="icon" href="images/favicon.ico?">
+<link rel="icon" href="images/favicon.ico">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Mate+SC&family=Montserrat&display=swap" rel="stylesheet">
 
@@ -17,16 +17,18 @@
 
   <h1 class="website-name">Hi, I'm <span class="main-website-name">Nachammai</span>!</h1>
 
-  <div class="top-cloud-image">
-    <img src="Angela images/cloud.png" alt="Picture of a cloud" />
-  </div>
+  <div id="container">
+    <div id="top-cloud-image">
+      <img src="Angela images/cloud.png" alt="Picture of a cloud" />
+    </div>
 
-  <div class="mountain-image">
-    <img src="Angela images/mountain.png" alt="Picture of a mountain" />
-  </div>
+    <div class="mountain-image">
+      <img src="Angela images/mountain.png" alt="Picture of a mountain" />
+    </div>
 
-  <div class="bottom-cloud-image">
-    <img src="Angela images/cloud.png" alt="Picture of a cloud" />
+    <div id="bottom-cloud-image">
+      <img src="Angela images/cloud.png" alt="Picture of a cloud" />
+    </div>
   </div>
 
   <div class="description">
@@ -36,7 +38,7 @@
     </div>
     <p>
       I am a Technical Solutions Consultant for Hewlett Packard Enterprise.<br>
-      I like coffee, books and rainy nights. Join me at <a href="https://www.instagram.com/_lookingforserendipity_">@_lookingforserendipity_</a> on instagram!🙂
+      I like coffee, books and rainy nights.🙂 Join me at <a href="https://www.instagram.com/_lookingforserendipity_">@_lookingforserendipity_</a> on instagram!
     </p>
     <br>
     <hr>
@@ -48,6 +50,7 @@
     <ul>
       <li>Technical Consultant at Hewlett Packard Enterprise</li>
       <ul>
+        <li>Full Stack development</li>
         <li>Excel Visual Basic Applications</li>
         <li>SharePoint online</li>
       </ul>
@@ -116,9 +119,33 @@
   </div>
   <div class="footer">
     <p>
+      <h3>Get to know me and let's code over a cup of coffee...</h3>
       <a href="contact.html" class="contact-me-button">Contact me</a>
     </p>
   </div>
+
+<script>
+  function myMove() {
+  let id = null;
+  const elem = document.getElementById("top-cloud-image");
+  const bottomElem = document.getElementById("bottom-cloud-image");
+  let pos = 0;
+  let bpos = 1000;
+  clearInterval(id);
+  id = setInterval(frame, 30);
+  function frame() {
+    if (pos == 300) {
+      clearInterval(id);
+    } else {
+      pos++;
+      bpos--;
+      elem.style.left = pos + 'px';
+      bottomElem.style.left = bpos + 'px';
+    }
+  }
+}
+myMove();
+</script>  
 </body>
 
 </html>
